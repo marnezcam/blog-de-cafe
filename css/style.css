@@ -1,8 +1,9 @@
 :root {
-  --fuenteHeading: "PT Sans", sans-serif;
-  --fuenteParrafos: "Open Sans", sans-serif;
+  --fuenteHeading: 'PT Sans', sans-serif;
+  --fuenteParrafos: 'Open Sans', sans-serif;
 
   --primario: #784d3c;
+  --gris: #e1e1e1;
   --blanco: #ffffff;
   --negro: #000000;
 }
@@ -91,7 +92,7 @@ img {
 }
 @media (min-width: 768px) {
   .header__texto {
-    margin-top: 20;
+    margin-top: 15;
   }
 }
 
@@ -105,10 +106,7 @@ img {
     /* Aling items para alinear verticalmente*/
   }
 
-  .navegacion {
-    display: flex;
-    gap: 2rem;
-  }
+
 }
 
 .logo {
@@ -116,10 +114,17 @@ img {
 }
 
 .logo__nombre {
-  font-weight: 200px;
+  font-weight: 200;
 }
 .logo__bold {
-  font-weight: 700px;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .navegacion {
+    display: flex;
+    gap: 2rem;
+  }
 }
 
 .navegacion__enlace {
@@ -127,4 +132,22 @@ img {
   text-align: center;
   font-size: 1.8rem;
   color: var(--blanco);
+}
+
+@media (min-width: 768px) {
+  .contenido-principal {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.entrada {
+  background-color: red;
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
+
+entrada:last-of-type {
+  
 }
