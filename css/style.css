@@ -1,6 +1,6 @@
 :root {
-  --fuenteHeading: 'PT Sans', sans-serif;
-  --fuenteParrafos: 'Open Sans', sans-serif;
+  --fuenteHeading: "PT Sans", sans-serif;
+  --fuenteParrafos: "Open Sans", sans-serif;
 
   --primario: #784d3c;
   --gris: #e1e1e1;
@@ -41,6 +41,7 @@ h2,
 h3,
 h4 {
   font-family: var(--fuenteHeading);
+  line-height: 1.2;
 }
 
 h1 {
@@ -105,8 +106,6 @@ img {
     align-items: center;
     /* Aling items para alinear verticalmente*/
   }
-
-
 }
 
 .logo {
@@ -143,11 +142,66 @@ img {
 }
 
 .entrada {
-  background-color: red;
+  border-bottom: 1px solid var(--gris);
   padding: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
-entrada:last-of-type {
-  
+.entrada:last-of-type {
+  border: none;
+  margin-bottom: 0;
+}
+
+.boton {
+  text-align: center;
+  display: block;
+  font-family: var(--fuenteHeading);
+  color: var(--blanco);
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .boton {
+    display: inline-block;
+    /* Cuando tenemos un display inline se ignora el ancho y los margins */
+  }
+}
+
+.boton--primario {
+  background-color: var(--negro);
+}
+
+.boton--secundario {
+  background-color: var(--primario);
+}
+
+.curso {
+  list-style: none;
+}
+
+.widget-curso {
+  border-bottom: 1px solid var(--gris);
+  margin-bottom: 2rem;
+}
+.widget-curso:last-of-type {
+  border: none;
+  border-bottom: none;
+}
+
+.widget-curso__label {
+  font-family: var(--fuenteHeading);
+  font-weight: bold;
+}
+
+.widget-curso__info {
+  font-weight: 400;
+}
+
+.widget-curso__label,
+.widget-curso__info {
+  font-size: 2rem;
 }
