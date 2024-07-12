@@ -167,6 +167,7 @@ img {
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 2rem;
+  border: none;
 }
 
 @media (min-width: 768px) {
@@ -174,6 +175,9 @@ img {
     display: inline-block;
     /* Cuando tenemos un display inline se ignora el ancho y los margins */
   }
+}
+.boton:hover {
+  cursor: pointer;
 }
 
 .boton--primario {
@@ -244,4 +248,65 @@ img {
 
 .curso:last-of-type {
   border: none;
+}
+
+.curso__label {
+  font-family: var(--fuenteHeading);
+  font-weight: bold;
+}
+
+.curso__info {
+  font-weight: 400;
+}
+
+.curso__label,
+.curso__info {
+  font-size: 2rem;
+}
+/*Entrada*/
+.entrada-nosotros {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/*Contacto*/
+
+.contacto-bg {
+  background-image: url(../img/blog2.jpg);
+  height: 40rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.formulario {
+  background-color: var(--blanco);
+  margin: -5rem auto 0 auto;
+  width: 95%;
+  padding: 5rem;
+}
+
+.campo {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.campo__label {
+  flex: 0 0 9rem;
+  /*
+  flex
+  primer 0 es el factor de crecimiento
+  segundo 0 es el factor de decrecimiento
+  9rem Establece el tamaño que tendra fijo
+  */
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.campo__field {
+  flex: 1;
+  border: 1px solid var(--gris);
+}
+
+.campo__field--textarea {
+  height: 20rem;
 }
